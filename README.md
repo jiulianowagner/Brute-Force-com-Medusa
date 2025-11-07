@@ -1,5 +1,5 @@
 # Brute Force com Medusa
-Este projeto documenta uma série de simulações de ataques de força bruta contra ambientes propositalmente vulneráveis (Metasploitable). O objetivo primário é analisar o comportamento dos ataques, compreender as vulnerabilidades e exercitar a implementação, validação e documentação de medidas de prevenção e mitigação como parte essencial das operações de um Analista de SOC (Security Operations Center).
+Este projeto documenta uma série de simulações de ataques de força bruta contra ambientes propositalmente vulneráveis (Metasploitable e DVWA - Damn Vulnerable Web Application). O objetivo primário é analisar o comportamento dos ataques, compreender as vulnerabilidades e exercitar a implementação, validação e documentação de medidas de prevenção e mitigação como parte essencial das operações de um Analista de SOC (Security Operations Center).
 
 # Ambiente
 | Componente | Função | Componente Chave |
