@@ -1,0 +1,5 @@
+# Enumeração - coletar informações detalhadas de hosts Windows e Samba
+1 - enum4linux -a <IP> | tee enum4_output.txt
+
+# vendo o resultado e buscando usuarios "alvo"
+2 - less enum4_output.txt
