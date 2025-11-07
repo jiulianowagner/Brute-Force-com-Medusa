@@ -12,5 +12,6 @@ Metasploitable é um sistema operacional de máquina virtual intencionalmente vu
 4- Configurar em ambas Host Only (Network)
 
 5- No Metasploitable (criar um snapshot): Maquina a ser atacada
+O objetivo do snapshot é voltar ao estado original caso seja necessário
 
 # xxx
