@@ -1,0 +1,12 @@
+1-  Logar no Metasplote com as senhas padrão
+
+2 - Descobrindo o <IP> da máquina -  comando ip a 
+
+3 - Logar no kaly com as senhas padrão
+
+4 - Localizando vulnerabilidade por meio do NMAP: nmap -sv - p 21,22,80,445,139 <IP>
+
+5 - Vendo se o FTP está disponível: FTP <IP>
+
+
+  
