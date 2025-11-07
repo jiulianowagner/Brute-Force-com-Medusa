@@ -1,6 +1,14 @@
 # Brute Force com Medusa
 Este projeto documenta uma série de simulações de ataques de força bruta contra ambientes propositalmente vulneráveis (Metasploitable). O objetivo primário é analisar o comportamento dos ataques, compreender as vulnerabilidades e exercitar a implementação, validação e documentação de medidas de prevenção e mitigação como parte essencial das operações de um Analista de SOC (Security Operations Center).
 
+# Ambiente
+| Componente | Função | Componente Chave |
+|-------------|-----------|:-----------:|
+| Kali Linux | Plataforma de Ataque. | Máquina virtual configurada para rede interna. |
+| Metasploitable 2 | Alvo vulnerável (FTP) | Vários serviços desatualizados e abertos. |
+| Medusa | Ferramenta de testes de força bruta. | Utilizada para automação de tentativas em massa. |
+| DVWA (PHP/MySQL) | Alvo vulnerável (Formulário Web). | Nível de Segurança configurado para 'Low' (Baixo) para testes iniciais. |
+
 # Preparação do ambiente
 1 - Instalar VirtualBox
 
@@ -14,4 +22,7 @@ Metasploitable é um sistema operacional de máquina virtual intencionalmente vu
 5- No Metasploitable (criar um snapshot): Maquina a ser atacada
 O objetivo do snapshot é voltar ao estado original caso seja necessário
 
-# xxx
+# Simulação
+Simular cenários de ataque de força bruta e exercitar medidas de prevenção para 
+1 - FTP
+2 - HTTP
