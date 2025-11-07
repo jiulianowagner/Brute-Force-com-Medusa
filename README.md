@@ -44,3 +44,18 @@ O objetivo do snapshot é voltar ao estado original caso seja necessário
 
 **Controle de Bots:** Adição de um mecanismo CAPTCHA após a detecção de um comportamento anômalo.
 
+# Password Spraying em SMB com Enumeração de Usuários
+**Vulnerabilidade:** Serviço SMB (445) que permite enumeração de usuários e não impõe bloqueio após tentativas falhas.
+
+**Simulação do Ataque:**
+
+**Enumeração:** Uso de ferramentas (como enum4linux ou Medusa) para coletar a lista de usuários válidos.
+
+**Spraying:** Uso do Medusa para tentar uma única senha comum (simulada) contra a lista de usuários coletada.
+
+**Estratégia de Mitigação (Foco SOC):**
+
+Desabilitar Enumeração: Configuração do smb.conf para restringir a enumeração de usuários (visando dificultar a coleta de alvos).
+
+Lista de Senhas Proibidas: Documentação da importância de implementar políticas de "senhas proibidas" no gerenciamento de identidades.
+
