@@ -22,7 +22,25 @@ Metasploitable é um sistema operacional de máquina virtual intencionalmente vu
 5- No Metasploitable (criar um snapshot): Maquina a ser atacada
 O objetivo do snapshot é voltar ao estado original caso seja necessário
 
-# Simulação
-Simular cenários de ataque de força bruta e exercitar medidas de prevenção para 
-1 - FTP
-2 - HTTP
+# Força Bruta em Serviço FTP
+**Vulnerabilidade:** Serviço FTP sem limites de tentativas de login.
+
+**Simulação do Ataque:** Uso do Medusa para testar uma lista de senhas contra a porta FTP (21) do Metasploitable 2.
+
+**Estratégia de Mitigação (Foco SOC):**
+
+**Política de Bloqueio:** Configuração do servidor FTP para bloquear o IP de origem após 3 tentativas de login falhas em 60 segundos.
+
+**Monitoramento:** Análise dos logs (/var/log/auth.log) para identificar a string indicadora do ataque de força bruta e a regra de alerta correspondente.
+
+# Automação de Tentativas em Formulário Web (DVWA)
+**Vulnerabilidade:** Formulário de login sem rate limiting ou proteção CAPTCHA.
+
+**Simulação do Ataque:** Uso do Medusa para automatizar o envio de credenciais via POST Request do formulário de login do DVWA.
+
+**Estratégia de Mitigação (Foco SOC):**
+
+**Controle de Taxa (Rate Limiting):** Implementação de regras no Web Application Firewall (WAF) ou no reverse proxy para limitar o número de requisições por IP a X por minuto na rota de login.
+
+**Controle de Bots:** Adição de um mecanismo CAPTCHA após a detecção de um comportamento anômalo.
+
